@@ -46,6 +46,12 @@ Commit the staged changes
 git commit -m [message]
 ```
 
+See the history of commits
+
+```
+git log
+```
+
 For example:
 
 ```
