@@ -1,7 +1,8 @@
 # BlueFrame
 This is a small organization, made by Seth, Brandon and, Joel. 
 
-Some basic git commands
+
+## Basic git commands
 
 Copy down (clone) the repository from github
 ```
