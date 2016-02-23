@@ -79,3 +79,11 @@ git pull
 git stash pop
 ```
 
+So in Conclusion to add a change and commit it, so others can see it you...
+
+```
+git add [filename]
+git add .
+git commit -m “[Message]”
+git push origin master
+```
