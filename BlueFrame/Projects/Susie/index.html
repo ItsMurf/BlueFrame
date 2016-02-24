@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.0/lodash.min.js"></script>
+	<script src="gs.js"></script>
+	<title>Susie</title>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.1.0/annyang.min.js"></script>
+	<script>
+	if (annyang) {
+	  
+	  var cptname = function captainConfirm(name){responsiveVoice.speak("Captain "+name+" confirmed")}; // assuming that this still isn't working?
+	  var name = "bob"
+	  var seconds = 0 
+	  var start = false
+	  var minutes = 5 // Thinking about changing this to 10? In terms of a video game it would be 5-10
+
+	 window.setInterval(function(){
+	 	if(seconds == 0 && start == true){seconds = 60;minutes--;} 
+	 	if(seconds > 0 && minutes > -1 && start == true){seconds--};
+	 	$("#m").text(minutes); 
+	 	$("#s").text(seconds);
+	 }, 1000);
+	 // Test for Git Hub by seth
+	 window.setInterval(function(){
+	 	if(minutes == 4 && seconds == 0){responsiveVoice.speak("warning, oxygen levels are about 4 Minutes")};
+	 	if(minutes == 3 && seconds == 0){responsiveVoice.speak("warning, oxygen levels are about 3 Minutes")};
+	 	if(minutes == 2 && seconds == 0){responsiveVoice.speak("warning, oxygen levels are about 2 Minutes")};
+	 	if(minutes == 1 && seconds == 0){responsiveVoice.speak("warning, oxygen levels are about 1 Minute")};
+	 	if(minutes == 0 && seconds == 30){responsiveVoice.speak("warning, oxygen levels are about 30 seconds")};
+	 	if(minutes == 0 && seconds == 15){responsiveVoice.speak("warning, oxygen levels are about 15 seconds")};
+	 	if(minutes == 0 && seconds == 9){responsiveVoice.speak("9")};
+	 	if(minutes == 0 && seconds == 9){responsiveVoice.speak("9")};
+	 	if(minutes == 0 && seconds == 8){responsiveVoice.speak("8")};
+	 	if(minutes == 0 && seconds == 7){responsiveVoice.speak("7")};
+	 	if(minutes == 0 && seconds == 6){responsiveVoice.speak("6")};
+	 	if(minutes == 0 && seconds == 5){responsiveVoice.speak("5")};
+	 	if(minutes == 0 && seconds == 4){responsiveVoice.speak("4")};
+	 	if(minutes == 0 && seconds == 3){responsiveVoice.speak("3")};
+	 	if(minutes == 0 && seconds == 2){responsiveVoice.speak("2")};
+	 	if(minutes == 0 && seconds == 1){responsiveVoice.speak("1,,,, You,,,Failed")};
+	 }, 1001);
+	}
+	
+</script>
+<style>
+h3{
+	font-family: Arial, Helvetica, sans-serif;
+	}
+h1{
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+</style>
+</head>
+<body style="zoom:250%;background-image:url(blueframe.gif);background-size:10%;">
+	<center>
+	<h1>Susie the Space Simulator</h1> <!-- Wow! One Hundred Lines -->
+	<input class="btn btn-default" onclick='annyang.start();start = true;' type='button' value='Start' />
+	<input class="btn btn-default" onclick='responsiveVoice.speak("Hello Captain"+name+", you are in a ship called the night hawk, you are curently positioned outside mars in a space station. From my calculations, I would guess that your ship made contact with a small meteorite, and many of the vital funtions of the ship are damaged. Even though I was able to steer your ship into the space station, Your crew must find a way to survive until an rescue ship that will arive hear in 4 minutes and 55 second to picks you up. There are several thousand ways that your team can survive, however, you need to figure out what the best and most efficient way would be. I will aid you as Much as I can, and remeber, you only have 5 Minutes of oxygen.");' type='button' value='Story' />
+	<input class="btn btn-default" onclick='responsiveVoice.speak("Hi, my name is Susie, I am the worlds smartest computer, programmed to assist you");' type='button' value='Susie' />
+	<input class="btn btn-default" onclick='responsiveVoice.speak("");start = false;' type='button' value='Stop' />
+	<input class="btn btn-default" onclick='location.reload()' type='button' value='Reset' />
+	<h3><span id="m">5</span> <span>Minutes</span> <span id="s">0</span> <span>Seconds</span></h3>
+	</center>
+
+	<!-- Spreasheet Link https://docs.google.com/spreadsheets/d/1r9gX1jqOwrH-1YATTubxlAn88mbmP_2C6M1zCwTyA6Y/edit#gid=0 !-->
+	<div id="results"></div>
+	<script id='script'>
+		function resultsToRows(results){
+			var index = 0;
+			var rowIndex = 0;
+			var cellIndex = 0;
+			var rows = [];
+			var cells = [];
+			rows[rowIndex] = cells;
+			_.each(results, function(value){
+				cells[cellIndex] = value;
+				index++;
+				if (index%4 == 0){
+					cells.listen = cells[0];
+					cells.respond = cells[1];
+					cells.fn = cells[2];
+					cells.display = cells[3];
+
+					cells = [];
+					rowIndex++;
+					cellIndex = 0;
+					rows[rowIndex] = cells;
+				} else {
+					cellIndex++;
+				}
+			});
+			return rows;
+		}
+
+
+    localStorage.clear();
+    var sample_url = "https://docs.google.com/spreadsheets/d/1r9gX1jqOwrH-1YATTubxlAn88mbmP_2C6M1zCwTyA6Y/pubhtml?gid=0&single=true";
+    var url_parameter = document.location.search.split(/\?url=/)[1]
+    var url = url_parameter || sample_url;
+    var googleSpreadsheet = new GoogleSpreadsheet();
+    googleSpreadsheet.url(url);
+    googleSpreadsheet.load(function(result) {
+    	var rows = resultsToRows(result.data);
+      var commands = _.reduce(rows, function(result, row){
+      	result[row.listen] = function(){responsiveVoice.speak(row.respond);}
+      	return result;
+      },{});
+      console.log(_.keys(commands));
+			annyang.addCommands(commands);
+    });
+  </script>
+
+</body>
+</html>
