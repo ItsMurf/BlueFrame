@@ -9,12 +9,6 @@ Copy down (clone) the repository from github
 git clone git@github.com:ItsMurf/BlueFrame.git
 ```
 
-Stage a change for committing
-
-```
-git add [filename]
-```
-
 See what files have changed
 
 ```
@@ -25,6 +19,12 @@ See the actual changes
 
 ```
 git diff
+```
+
+Stage a change for committing
+
+```
+git add [filename]
 ```
 
 For example:
@@ -45,12 +45,6 @@ Commit the staged changes
 
 ```
 git commit -m [message]
-```
-
-See the history of commits
-
-```
-git log
 ```
 
 For example:
@@ -77,5 +71,11 @@ If you haven't committed changes to a file, you may need to stash  those changes
 git stash
 git pull
 git stash pop
+```
+
+See the history of commits
+
+```
+git log
 ```
 
