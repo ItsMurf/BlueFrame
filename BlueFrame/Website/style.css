@@ -24,7 +24,7 @@ body {
 	font-size: 14pt;
 	line-height: 1.75em;
 	background: #FFF;
-	color: #C2C2C3;
+	color: #000;
 }
 
 body,input {
@@ -138,7 +138,7 @@ img {
 }
 
 #copyright a {
-	color: #C2C2C3;
+	color: #000;
 }
 
 #header {
@@ -217,7 +217,7 @@ img {
 #nav a {
 	text-decoration: none;
 	font-size: 1.25em;
-	color: #EEE;
+	color: #000;
 }
 
 #nav .active a {
