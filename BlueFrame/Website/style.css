@@ -23,7 +23,7 @@ a:hover {
 body {
 	font-size: 14pt;
 	line-height: 1.75em;
-	background: #0C0B0E;
+	background: #FFF;
 	color: #C2C2C3;
 }
 
@@ -51,7 +51,7 @@ h2 {
 h2,h3,h4 {
 	margin-bottom: 1em;
 	font-family: Shanti, sans-serif;
-	color: #FFF;
+	color: #000000;
 }
 
 h3 {
@@ -161,7 +161,7 @@ img {
 }
 
 #logo a span {
-	color: #FFF;
+	color: #000000;
 }
 
 #logo h1 {
@@ -249,7 +249,7 @@ img {
 #search input.button {
 	margin-left: 1em;
 	border: 0;
-	color: #FFF;
+	color: #000000;
 	background: #2B65EC;
 	padding: 4px;
 	font-family: Shanti, sans-serif;
