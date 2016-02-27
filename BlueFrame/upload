@@ -1,3 +1,4 @@
 #!/bin/sh
 
-aws s3 cp --recursive Website s3://blueframe.site --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --profile seth --region us-west-2
+aws s3 cp --recursive ./Website s3://blueframe.site --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --profile seth --region us-west-2
+aws s3 cp --recursive ./Projects s3://blueframe.site --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --profile seth --region us-west-2

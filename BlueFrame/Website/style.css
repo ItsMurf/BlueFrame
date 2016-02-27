@@ -294,3 +294,10 @@ img {
 	background-color: white ! important;
 	border-color: white ! important;
 }
+.blogpost button {
+	font-size: 30px;
+	width: 250px;
+	height: 40px;
+	background-color: white;
+	border-radius: 8px;
+}
