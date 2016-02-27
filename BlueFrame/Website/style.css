@@ -11,7 +11,7 @@
 }
 
 a {
-	color: #2B65EC;
+	color: #000;
 	text-decoration: none ! important;
 
 }
@@ -107,7 +107,7 @@ img {
 }
 
 .blogpost h2 {
-	margin: 0 0 10px 0;
+	margin: 0 0 -15px 0;
 }
 
 
@@ -144,7 +144,7 @@ img {
 #header {
 	position: relative;
 	padding: 24px;
-	height: 130px;
+	height: 100px;
 }
 
 #logo {
@@ -234,7 +234,7 @@ img {
 	padding: 0 8px 0 8px;
 }
 #nav ul li.active {
-	background: #2B65EC;
+	background: #87CEFA;
 	border-radius: 8px;
 	padding: 8px 0 8px 8px;
 }
@@ -272,4 +272,25 @@ img {
 	font-family: Shanti, sans-serif;
 	border-radius: 8px;
 	color: #000;
+}
+
+#sidebar a.active {
+	border-radius: 8px;
+	border-width: 8px;
+	border-style: solid;
+	background-color: #87CEFA;
+	border-color: #87CEFA;
+}
+
+#sidebar a {
+	border-radius: 8px;
+	border-width: 8px;
+	border-style: solid;
+	background-color: #e5f5ff;
+	border-color: #e5f5ff;
+}
+
+.contactinfo a {
+	background-color: white ! important;
+	border-color: white ! important;
 }

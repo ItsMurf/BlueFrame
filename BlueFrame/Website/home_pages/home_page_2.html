@@ -13,9 +13,10 @@
 		<title>BlueFrame</title>
 		<link href="http://fonts.googleapis.com/css?family=Antic" rel="stylesheet" type="text/css" />
 		<link href="http://fonts.googleapis.com/css?family=Shanti" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<link rel="icon" href="favicon.png" type="image/png">
+		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<link rel="icon" href="../favicon.png" type="image/png">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script type="text/javascript" src="../javascript.js"></script>
 	</head>
 	<body>
 		<div id="outer">
@@ -43,16 +44,16 @@
 					<h3>About Us</h3>
 					<ul class="linkedList">
 						<li class="first">
-							<a href="index.html" class="active">Who we Are</a>
+							<a href="../index.html" class="">Who we Are</a>
 						</li>
 						<li>
-							<a href="home_pages/home_page_2.html" class="">Services</a>
+							<a href="../home_pages/home_page_2.html" class="active">Services</a>
 						</li>
 						<li>
-							<a href="home_pages/home_page_3.html" class="">Differentiation</a>
+							<a href="../home_pages/home_page_3.html" class="">Differentiation</a>
 						</li>
 						<li class="last">
-							<a href="home_pages/home_page_4.html" class="">Careers</a>
+							<a href="../home_pages/home_page_4.html" class="">Careers</a>
 						</li>
 					</ul>
 					<h3>Contact Us</h3>
@@ -74,11 +75,11 @@
 				<div id="content">
 					<div id="box1">
 						<div class="blogpost">
-							<img class="left" src="images/pic01.jpg" width="812" height="300" alt="" />
-							<h2>Who We Are</h2>
+							<img class="left" src="../images/pic02.jpg" width="812" height="300" alt="" />
+							<h2>Services</h2>
 							<p></p>
 							<p style="text-indent: 50px;">
-								Our company designs add-ons to basic functions on your house, like outlets, so that you can control them using the sound of your voice. We focus on extending the use of household components to improve your experience. This technology is very helpful to everyone, and especially to people to who are unable to operate their house on their own, because it allows you to control your house by the sound of your voice. Our company is more suitable because it is easy to install and to use, and doesn’t permanently change your house. 
+								BlueFrame allows you to relax, and control stuff from the comfort of
 							</p>
 						</div>
 					</div>
@@ -90,16 +91,4 @@
 			
 		</div>
 	</body>
-	<script type="text/javascript" src="javascript.js"></script>
-	<script>
-		$('body').hide()
-		if(prompt("This site is in Beta Testing. If you are authorized to veiw it, please enter the passcode") == 3487) {
-			alert("Welcome to BlueFrame")
-			$('body').show()
-		}
-		else {
-			$('body').hide()
-			alert("Passcode is incorect. You are unauthorized to veiw this website.")
-		}
-	</script>
 </html>

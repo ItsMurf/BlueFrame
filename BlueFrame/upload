@@ -1,5 +1,3 @@
 #!/bin/sh
 
-aws s3 cp Website/index.html s3://blueframe.site --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --profile seth --region us-west-2
-aws s3 cp Website/style.css s3://blueframe.site --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --profile seth --region us-west-2
-aws s3 cp Website/images/pic01.jpg s3://blueframe.site --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --profile seth --region us-west-2
+aws s3 cp --recursive Website s3://blueframe.site --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --profile seth --region us-west-2
