@@ -130,6 +130,11 @@ img {
 	margin: 0 0 0 320px;
 	padding: 0;
 }
+div.store {
+	width: 812px;
+	margin: 0 0 0 0px ! important;
+	padding: 0;
+}
 
 #copyright {
 	margin: 0 0 36px 0;
