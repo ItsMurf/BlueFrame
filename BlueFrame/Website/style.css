@@ -113,16 +113,16 @@ img {
 
 #box1 {
 	margin: 0 0 20px 0;
-	overflow: hidden;
+	overflow: visible;
 }
 
 #box2 {
 	margin: 0 0 20px 0;
-	overflow: hidden;
+	overflow: visible;
 }
 
 #box3 {
-	overflow: hidden;
+	overflow: visible;
 }
 
 #content {
