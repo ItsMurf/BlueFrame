@@ -28,7 +28,8 @@ body {
 }
 
 body,input {
-	font-family: Antic, sans-serif;
+	font-weight: 300;
+	font-family: 'Raleway', sans-serif;
 }
 
 br.clear {
@@ -50,7 +51,8 @@ h2 {
 
 h2,h3,h4 {
 	margin-bottom: 1em;
-	font-family: Shanti, sans-serif;
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
 	color: #000000;
 }
 
@@ -171,7 +173,8 @@ div.store {
 
 #logo h1 {
 	font-size: 2.75em;
-	font-family: Shanti, sans-serif;
+	font-weight: 300;
+	font-family: 'Raleway', sans-serif;
 }
 
 #main {
@@ -216,7 +219,8 @@ div.store {
 	height: 56px;
 	line-height: 56px;
 	top: 61px;
-	font-family: Shanti, sans-serif;
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
 }
 
 #nav a {
@@ -257,7 +261,8 @@ div.store {
 	color: #000000;
 	background: #37AFFB;
 	padding: 4px;
-	font-family: Shanti, sans-serif;
+	font-weight: 300;
+	font-family: 'Raleway', sans-serif;
 }
 
 #search input.text {
@@ -274,7 +279,8 @@ div.store {
 #sidebar h3 {
 	background: #37AFFB;
 	padding: 4px 8px;
-	font-family: Shanti, sans-serif;
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
 	border-radius: 8px;
 	color: #000;
 }
