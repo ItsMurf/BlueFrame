@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.0/lodash.min.js"></script>
+	<script src="gs.js"></script>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.1.0/annyang.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="javascript.js"></script>
+	<link rel="icon" href="favicon.png" />
+<head>
+	<title>Voice Command</title>
+</head>
+<body style="zoom:250%;" id="main1" >
+	<center style="margin:0;">
+
+		<h2 id="said" class="" style="position:absolute;text-align:center;width:100%"></h2>
+		<img src="mic.gif" id="listening" style="width:80%;height:80%;">
+
+	</center>
+</body>
+
+
+
+	<!-- https://docs.google.com/spreadsheets/d/1jQFyT4vzWSBylQhY7v9rwtKQVP4QJjS_dRLhPKG_BRQ/pubhtml?gid=0&single=true !-->
+	<div id="results"></div>
+	<script id='script'>
+
+	annyang.start()
+	console.log("Annyang 2.3 Ready")
+	localStorage.clear();
+    var sample_url = "https://docs.google.com/spreadsheets/d/1jQFyT4vzWSBylQhY7v9rwtKQVP4QJjS_dRLhPKG_BRQ/pubhtml?gid=0&single=true";
+    var url_parameter = document.location.search.split(/\?url=/)[1]
+    var url = url_parameter || sample_url;
+    var googleSpreadsheet = new GoogleSpreadsheet();
+    googleSpreadsheet.url(url);
+    googleSpreadsheet.load(function(result) {
+      var rows = resultsToRows(result.data);
+        var commands = _.reduce(rows, function(result, row){
+        result[row.listen] = function(link){          
+          responsiveVoice.speak(row.respond);
+          console.log("%cInput: "+row.listen, 'color:blue')
+          console.log("%cOutput: "+row.respond, 'color:blue')
+          console.log("%cFunction Called: "+row.fn, 'color:blue')
+          console.log("%cNotes: "+row.notes, 'color:blue')
+          fns[row.fn].call(link);
+          if (row.listen == "open *link"){
+          	console.log("Opened Website -- http://"+link.replace(/\s+/g, '').toLowerCase())
+          	window.open("http://"+link.replace(/\s+/g, '').toLowerCase())
+      	  }
+          if(row.notes.includes('http') == true){
+          	window.open(row.notes)
+          }
+          finishFunction(row);
+        }
+        return result;
+      },{});
+      annyang.addCommands(commands);
+    });
+  </script>
+</html>

@@ -1,0 +1,16 @@
+.fadein{
+	-webkit-animation:opac 1s;
+	animation:opac 1s}
+.fadeout{
+	-webkit-animation:revr 1s;
+	animation:revr 1s}
+
+	@-webkit-keyframes opac{from{opacity:0} to{opacity:1}}
+	@keyframes opac{from{opacity:0} to{opacity:1}}
+
+	@-webkit-keyframes revr{from{opacity:1} to{opacity:0}}
+	@keyframes revr{from{opacity:1} to{opacity:0}}
+
+#said{
+		/*font-family: 'Impact', 'fantasy'; */
+	}
