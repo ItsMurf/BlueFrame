@@ -164,7 +164,7 @@ div.store {
 
 #logo a {
 	text-decoration: none;
-	color: #37AFFB;
+	color: #0087ff;
 }
 
 #logo a span {
@@ -243,7 +243,7 @@ div.store {
 	padding: 0 8px 0 8px;
 }
 #nav ul li.active {
-	background: #37AFFB;
+	background: #0087ff;
 	border-radius: 8px;
 	padding: 8px 0 8px 8px;
 }
@@ -259,7 +259,7 @@ div.store {
 	margin-left: 1em;
 	border: 0;
 	color: #000000;
-	background: #37AFFB;
+	background: #0087ff;
 	padding: 4px;
 	font-weight: 300;
 	font-family: 'Raleway', sans-serif;
@@ -277,7 +277,7 @@ div.store {
 }
 
 #sidebar h3 {
-	background: #37AFFB;
+	background: #0087ff;
 	padding: 4px 8px;
 	font-weight: 400;
 	font-family: 'Raleway', sans-serif;
@@ -289,16 +289,16 @@ div.store {
 	border-radius: 8px;
 	border-width: 8px;
 	border-style: solid;
-	background-color: #37AFFB;
-	border-color: #37AFFB;
+	background-color: #0087ff;
+	border-color: #0087ff;
 }
 
 #sidebar a {
 	border-radius: 8px;
 	border-width: 8px;
 	border-style: solid;
-	background-color: #c3e7fd;
-	border-color: #c3e7fd;
+	background-color: white;
+	border-color: white;
 }
 
 .contactinfo a {
