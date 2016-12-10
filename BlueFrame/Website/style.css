@@ -230,7 +230,7 @@ div.store {
 }
 
 #nav .active a {
-	color: #000;
+	color: white;
 }
 
 #nav ul {
@@ -282,7 +282,7 @@ div.store {
 	font-weight: 400;
 	font-family: 'Raleway', sans-serif;
 	border-radius: 8px;
-	color: #000;
+	color: white;
 }
 
 #sidebar a.active {
@@ -291,6 +291,7 @@ div.store {
 	border-style: solid;
 	background-color: #0087ff;
 	border-color: #0087ff;
+	color: white;
 }
 
 #sidebar a {
