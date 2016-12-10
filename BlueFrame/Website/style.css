@@ -156,7 +156,7 @@ div.store {
 
 #logo {
 	position: absolute;
-	top: 24px;
+	top: 40px;
 	left: 24px;
 	height: 130px;
 	line-height: 130px;
@@ -174,6 +174,8 @@ div.store {
 #logo h1 {
 	font-size: 2.75em;
 	font-weight: 300;
+	margin-top: 10px;
+    margin-left: 70px;
 	font-family: 'Raleway', sans-serif;
 }
 
