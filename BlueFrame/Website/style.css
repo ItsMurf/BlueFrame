@@ -254,7 +254,7 @@ div.store {
 #outer {
 	position: relative;
 	width: 1180px;
-	margin: 64px auto 0 auto;
+	margin: 0px auto 0 auto;
 }
 
 #search input.button {
@@ -314,4 +314,98 @@ div.store {
 	height: 40px;
 	background-color: white;
 	border-radius: 8px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+.span4
+{
+    width: 80px;
+    float: left;
+    margin: 0 8px 10px 8px;
+}
+
+.phone
+{
+    margin-top: 15px;
+    background: #fff;
+}
+.tel
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #0087ff;
+    border-radius: 0px;
+}
+.num-pad
+{
+    padding-left: 15px;
+}
+
+
+.num
+{
+    border: 1px solid #0087ff;
+    -webkit-border-radius: 999px;
+    border-radius: 999px;
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    margin-left: 19px;
+}
+.num:hover
+{
+    background-color: #0087ff;
+    color: #fff;
+    transition-property: background-color .2s linear 0s;
+    -webkit-transition: background-color .2s linear 0s;
+}
+.txt
+{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Lato' , sans-serif;
+    line-height: 30px;
+    color: #333;
+}
+.small
+{
+    font-size: 15px;
+}
+
+.spanicons
+{
+    width: 72px;
+    float: left;
+    text-align: center;
+    margin-top: 40px;
+    color: #0087ff;
+    font-size: 30px;
+    cursor: pointer;
+}
+.spanicons:hover
+{
+    color: #0087ff;
+    transition-property: color .2s linear 0s;
+    -webkit-transition: color .2s linear 0s;
+}
+.active
+{
+    color: #0087ff;
+}
+
+.btn-info{
+	background-image: linear-gradient(to bottom,#0087ff 0,#0076e0
+ 100%);
+	background-repeat: repeat-x;
+    border-color: #0087ff;
+}
+.btn-info:hover{
+	background-color: #0087ff;
+    background-position: 0px -45px;
+    border-color: #0087ff;
 }
